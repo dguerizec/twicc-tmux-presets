@@ -1,0 +1,11 @@
+{
+  "name": "twicc-presets",
+  "description": "Create and manage .twicc-tmux.json preset files for TwiCC terminal sessions",
+  "version": "1.0.0",
+  "author": {
+    "name": "David Guerizec"
+  },
+  "homepage": "https://github.com/dguerizec/twicc-tmux-presets",
+  "repository": "https://github.com/dguerizec/twicc-tmux-presets",
+  "license": "MIT"
+}

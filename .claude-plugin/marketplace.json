@@ -1,0 +1,23 @@
+{
+  "name": "twicc-tmux-presets",
+  "owner": {
+    "name": "David Guerizec",
+    "email": "david@guerizec.net"
+  },
+  "metadata": {
+    "description": "Plugins for TwiCC (the web interface for Claude Code)"
+  },
+  "plugins": [
+    {
+      "name": "twicc-presets",
+      "source": "./plugins/twicc-presets",
+      "description": "Create and manage .twicc-tmux.json preset files for TwiCC terminal sessions",
+      "version": "1.0.0",
+      "author": {
+        "name": "David Guerizec"
+      },
+      "license": "MIT",
+      "keywords": ["twicc", "tmux", "presets", "terminal"]
+    }
+  ]
+}
