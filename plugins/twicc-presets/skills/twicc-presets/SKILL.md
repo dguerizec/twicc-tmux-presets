@@ -37,13 +37,35 @@ A `.twicc-tmux.json` file is a **JSON array** at the root (NOT an object). Each 
 | `command` | No       | Shell command to run when the preset window is created |
 | `cwd`     | No       | Working directory. Relative paths resolve against the directory containing the `.twicc-tmux.json` file. Defaults to that directory if omitted. |
 
-### Important rules
+### CRITICAL format rules
 
-- The root **must** be a JSON array `[...]`, NOT an object `{...}`.
-- Each entry **must** have a `name` field (string, non-empty).
+- The root **MUST** be a JSON array `[...]`. **NEVER** use an object `{...}` as root.
+- The **ONLY** allowed keys per entry are: `name`, `command`, `cwd`. No other keys.
+- Each entry **MUST** have a `name` field (string, non-empty).
 - The `command` field is optional. If present, it is sent as keystrokes to the tmux window after creation.
 - The `cwd` field is optional. Relative paths are resolved against the directory containing the `.twicc-tmux.json`. If omitted, the preset opens in the directory containing the config file.
 - Preset names should be descriptive and concise (shown in the UI as buttons).
+
+### WRONG — do NOT generate these formats
+
+```json
+// WRONG: root is an object
+{"name": "myproject", "shells": [{"name": "dev", "command": "..."}]}
+
+// WRONG: uses "shells", "windows", or any wrapper key
+{"windows": [{"name": "dev"}]}
+
+// WRONG: extra keys like "root", "focus", "env", "shell"
+[{"name": "dev", "focus": true, "env": {"FOO": "bar"}}]
+```
+
+### CORRECT — always use this exact structure
+
+```json
+[
+  {"name": "preset-name", "command": "optional command", "cwd": "optional/path"}
+]
+```
 
 ## Multi-source preset resolution
 
