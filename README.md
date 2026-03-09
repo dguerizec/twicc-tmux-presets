@@ -43,9 +43,6 @@ Or just ask naturally — Claude auto-invokes the skill when you mention twicc p
   {
     "name": "logs",
     "command": "tail -f logs/app.log"
-  },
-  {
-    "name": "shell"
   }
 ]
 ```

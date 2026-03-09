@@ -24,9 +24,6 @@ A `.twicc-tmux.json` file is a **JSON array** at the root (NOT an object). Each 
   {
     "name": "logs",
     "command": "tail -f logs/app.log"
-  },
-  {
-    "name": "shell"
   }
 ]
 ```
