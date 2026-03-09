@@ -1,10 +1,12 @@
 ---
 name: twicc-presets
-description: Create, edit, and manage .twicc-tmux.json preset files for TwiCC terminal sessions. Use when the user mentions twicc presets, .twicc-tmux.json, terminal presets, or wants to configure tmux shell presets for a project.
+description: "MUST invoke BEFORE writing any .twicc-tmux.json file. The format is NOT obvious and WILL be wrong without this skill. Use whenever: creating/editing/reading .twicc-tmux.json, user mentions twicc presets, terminal presets, tmux presets, preset file, or configuring shell presets for TwiCC."
 argument-hint: "[action] [args...]"
 ---
 
 # TwiCC Terminal Presets Manager
+
+**IMPORTANT: You MUST load this skill BEFORE writing or editing any `.twicc-tmux.json` file. The format is a specific JSON structure that you will get wrong without reading these instructions. Do NOT guess the format.**
 
 Manage `.twicc-tmux.json` files that configure terminal shell presets in [TwiCC](https://github.com/twidi/twicc) (the web interface for Claude Code).
 
